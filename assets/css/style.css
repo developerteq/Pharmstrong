@@ -1,0 +1,513 @@
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url(../fonts/NeueHaasDisplayRoman.woff) format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url(../fonts/NeueHaasDisplayMediu.woff) format('woff');
+  font-weight: 600;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+header,
+section,
+nav,
+footer {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1370px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: 'Neue Haas Grotesk Display Pro';
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.btnHldr :is(a, button) {
+  background: #063A52;
+  border-radius: 100px;
+  padding: 12px 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0;
+  display: block;
+  width: fit-content;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: 1px solid #063A52;
+  transition: all .2s ease-in-out;
+}
+
+.heading2 {
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  font-size: 52px;
+  line-height: 55px;
+}
+
+
+/* Announcement Bar Style Start  */
+.announceBarSect {
+  margin-top: 10px;
+}
+
+.announceBarCntntHldr {
+  border: 1px solid #000000;
+  border-radius: 3px;
+  text-align: center;
+  padding: 7px;
+}
+
+.announceBarCntntHldr p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+/* Announcement Bar Style End  */
+
+/* header Style Start */
+.headCntntHldr {
+  display: grid;
+  grid-template-columns: max-content 1fr 14%;
+  align-items: center;
+}
+
+.headLogoHldr a {
+  display: block;
+  width: fit-content;
+}
+
+.headLogoHldr a img {
+  max-width: 72px;
+}
+
+.headIconsHldr ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.headIconsHldr ul :is(img, svg) {
+  width: 22px;
+  height: 22px;
+}
+
+.headIconsHldr {
+  border: 1px solid #000000;
+  border-radius: 3px;
+  height: 100%;
+  align-content: center;
+}
+
+.headMenuHldr {
+  border: 1px solid #000000;
+  height: 100%;
+  align-content: center;
+  border-radius: 3px;
+}
+
+.headMenuHldr ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.headMenuHldr ul :is(a, span) {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #000000;
+  transition: all .2s ease-in-out;
+}
+
+.headMenuHldr ul :is(a, span):hover {
+  color: #063A52;
+  transition: all .2s ease-in-out;
+}
+
+/* header Style End */
+
+/* Main Banner Style Start */
+.mainBannerSect {
+  margin-bottom: 60px;
+}
+
+.mainBnrListSlider {
+  margin-top: 10px;
+}
+
+.listIconSlider .listIconHldr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.listIconSlider .listIconHldr img {
+  max-width: 26px;
+  object-fit: contain;
+}
+
+.listIconSlider .listIconHldr span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #FFFFFF;
+}
+
+.listIconSlider .swiper-wrapper {
+  transition-timing-function: linear !important;
+  transition-delay: 0s !important;
+}
+
+.listIconSlider .swiper-slide {
+  width: max-content;
+}
+
+.mainBnrRowsHldr {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+
+.mainBnrCntntHldr {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.mainBnrContent span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 0px 0px #00000040;
+}
+
+.mainBnrContent h1 {
+  font-weight: 600;
+  font-size: 86px;
+  line-height: 76px;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin: 30px 0 40px;
+}
+
+.mainBnrContent p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #FFFFFF;
+}
+
+.mainBnrContent .btnHldr {
+  margin-top: 50px;
+}
+
+.mainBnrContent {
+  padding-left: 30px;
+}
+
+.mainBnrHeroImg img {
+  max-width: 660px;
+  margin-left: auto;
+}
+
+.mainBnrProdImg img {
+  max-width: 357px;
+}
+
+.mainBnrProdImg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.mainBnrImage {
+  position: relative;
+}
+
+/* Main Banner Style End */
+
+/* Icon Boxes Style Start */
+.iconBoxesHldr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 30px;
+  max-width: 1130px;
+  margin: 0 auto;
+}
+
+.iconBoxesHldr .iconBox {
+  border: 1px solid #000000;
+  border-radius: 3px;
+  padding: 20px 30px;
+}
+
+.iconBoxesHldr .iconBox img {
+  max-width: 60px;
+  margin-bottom: 30px;
+}
+
+.iconBoxesHldr .iconBox p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+
+/* Icon Boxes Style End */
+
+/* Image With Content Style Start */
+.imageContentSect {
+  padding: 100px 0;
+}
+
+.imgCntntClmnHldr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.imgCntntImage {
+  position: relative;
+}
+
+.imgCntntImage img {
+  border-radius: 5px;
+}
+
+.imgIngredientsHldr {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #FFFFFF;
+  border-radius: 50px;
+  padding: 20px 5px;
+}
+
+.imgIngredientsHldr ul li {
+  text-align: center;
+}
+
+.imgIngredientsHldr ul li img {
+  max-width: 43px;
+  margin: 0 auto;
+}
+
+.imgIngredientsHldr ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.imgIngredientsHldr ul li span {
+  color: #063A52;
+  font-size: 10px;
+}
+
+.imgCntntContnet span {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #000000;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.imgCntntContnet h2 {
+  color: #063A52;
+  margin-bottom: 15px;
+}
+
+.imgCntntContnet h2.small {
+  font-size: 42px;
+  line-height: 44px;
+  font-weight: 600;
+}
+
+.imgCntntContnet h2.heading2 {
+  margin-bottom: 30px;
+}
+
+.imgCntntContnet p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #000000;
+  max-width: 535px;
+}
+
+.imgCntntContnet p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.imgCntntContnet .btnHldr {
+  margin-top: 50px;
+}
+
+.imgCntntClmnHldr.invertedClmns .imgCntntImage {
+  order: 2;
+}
+
+.imgCntntClmnHldr.invertedClmns .imgCntntContnet {
+  order: 1;
+}
+
+.imgCntntContnet ul li {
+  list-style-type: disc;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.imgCntntContnet ul {
+  padding-left: 30px;
+  max-width: 510px;
+}
+
+.imgCntntContnet ul li span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #063A52;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.imgCntntContnet ul li::marker {
+  color: #063A52;
+}
+
+.imgCntntContnet ul li:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+/* Image With Content Style End */
+
+
+/* Image Content BG Filled Style Start */
+.imgCntntContentHldr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.imgCntntImageHldr img {
+  max-width: 388px;
+  margin: 0 auto;
+}
+
+.imgCntntTextHldr h2 {
+  color: #063A52;
+  margin-bottom: 30px;
+}
+
+.imgCntntTextHldr p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.imgCntntTextHldr .tagline {
+  margin-top: 30px;
+  max-width: 400px;
+}
+
+.imgCntntTextHldr .tagline span {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.imgCntntBgFilledSect {
+  position: relative;
+  z-index: 1;
+}
+
+.imgCntntBgFilledSect::before {
+  content: "";
+  width: 670px;
+  height: 100%;
+  background-image: url(../images/wellness-bg-shape.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* Image Content BG Filled Style End */
