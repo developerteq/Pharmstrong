@@ -1,0 +1,1177 @@
+@media only screen and (max-width: 1101px) {
+  .mainBnrContent h1 {
+    font-size: 72px;
+    line-height: 62px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+
+  .imageContentSect,
+  .prodCardsSect,
+  .collectionCardsSect,
+  .featuredProdSect,
+  .stepsSect,
+  .imgBoxesSect,
+  .testimonialSect,
+  .faqSect,
+  .cardCotnentSect {
+    padding: 80px 0;
+  }
+
+  .heading2 {
+    font-size: 46px;
+    line-height: 48px;
+  }
+
+  .headMenuHldr {
+    display: none;
+  }
+
+  .headCntntHldr {
+    grid-template-columns: max-content 1fr;
+  }
+
+  .headIconsHldr ul {
+    justify-content: flex-end;
+  }
+
+  .headIconsHldr {
+    padding: 20px;
+  }
+
+  .listIconSlider .listIconHldr img {
+    max-width: 22px;
+  }
+
+  .listIconSlider .listIconHldr {
+    gap: 8px;
+  }
+
+  .mainBnrCntntHldr {
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  .mainBnrContent h1 {
+    font-size: 66px;
+    line-height: 62px;
+    margin-bottom: 25px;
+  }
+
+  .mainBnrContent {
+    padding: 30px 0 20px 20px;
+  }
+
+  .mainBnrProdImg img {
+    max-width: 270px;
+  }
+
+  .mainBnrContent .btnHldr {
+    margin-top: 40px;
+  }
+
+  .iconBoxesHldr {
+    gap: 20px;
+  }
+
+  .iconBoxesHldr .iconBox {
+    padding: 20px;
+  }
+
+  .iconBoxesHldr .iconBox p {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .iconBoxesHldr .iconBox img {
+    max-width: 55px;
+    margin-bottom: 25px;
+  }
+
+  .imgIngredientsHldr ul li img {
+    max-width: 40px;
+  }
+
+  .imgIngredientsHldr ul li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .imgIngredientsHldr {
+    padding: 15px 5px;
+  }
+
+  .imgCntntContnet span {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .imgCntntContnet h2.small {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  .videoSect {
+    height: 1160px;
+  }
+
+  .videoRow {
+    height: 580px;
+    max-height: 580px;
+  }
+
+  .videoCntntRow {
+    height: 580px;
+    padding: 80px 0;
+  }
+
+  .videoCntntHldr p {
+    font-size: 18px;
+  }
+
+  .videoCntntHldr ul li span {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .videoCntntHldr ul li img {
+    max-width: 22px;
+  }
+
+  .videoCntntHldr h2,
+  .videoCntntHldr p:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  .prodCardsTitleRow p,
+  .collectTitleRow p,
+  .stepsTitleRow p,
+  .testTitleRow p,
+  .faqSectTitleRow p {
+    margin-top: 25px;
+  }
+
+  .prodCardsRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-card-wrapper .card__media img {
+    max-width: 45%;
+  }
+
+  .collectCardsRow,
+  .stepsCntntRow {
+    margin: 50px 0;
+  }
+
+  .imgCntntBgFilledSect::before {
+    width: 420px;
+    background-size: cover;
+    background-position: left;
+  }
+
+  .imgCntntImageHldr img {
+    max-width: 350px;
+  }
+
+  .imgCntntContentHldr {
+    grid-template-columns: 1fr max-content;
+    gap: 100px;
+  }
+
+  .imgCntntTextHldr h2 {
+    margin-bottom: 25px;
+  }
+
+  .imgCntntTextHldr .tagline {
+    margin-top: 25px;
+  }
+
+  .imgCntntTextHldr p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .stepsCntntRow {
+    gap: 20px;
+  }
+
+  .stepBox .stepBoxIcon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .stepBox {
+    gap: 15px;
+  }
+
+  .stepBox .stepBoxText h3 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .stepBox .stepBoxText {
+    row-gap: 15px;
+  }
+
+  .imgBoxClmnHldr {
+    grid-template-columns: 0.6fr 1fr;
+  }
+
+  .imgBoxTextHldr h2 {
+    margin-bottom: 25px;
+  }
+
+  .imageBox .imageBoxImage img {
+    max-width: 60%;
+  }
+
+  .testBoxesHldr {
+    margin-top: 50px;
+  }
+
+  .ctaCntntHldr {
+    padding: 100px 50px;
+  }
+
+  .ctaCntntHldr h2 {
+    margin-bottom: 25px;
+  }
+
+  .ctaCntntHldr .btnHldr {
+    margin-top: 40px;
+  }
+
+  .faqItemsHldr {
+    margin-top: 50px;
+  }
+
+  .accordion-item-header {
+    padding: 25px;
+  }
+
+  .accordion-item-body-content {
+    padding-left: 25px;
+    padding-bottom: 25px;
+  }
+
+  .blogCardsClmnsHldr {
+    grid-template-columns: 1fr;
+  }
+
+  .blogCardsContentHldr h2 {
+    margin-bottom: 25px;
+  }
+
+  .cardCotnentCntntHldr {
+    padding-left: 0px;
+  }
+
+  .cardCotnentCntntHldr h2 {
+    margin-bottom: 25px;
+  }
+
+  .cardCotnentCntntHldr span {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .cardCotnentCntntHldr .cardDisclaimer span {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .cardCotnentCntntHldr p {
+    font-size: 18px;
+  }
+
+  .footerTopLogo img {
+    max-width: 110px;
+  }
+
+  .footerTopSocial {
+    margin-top: 25px;
+  }
+
+  .footerDiscHldr {
+    padding: 15px 15px 12px;
+  }
+
+  .footerDiscHldr p {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .footerMainHldr {
+    padding: 50px 0 50px;
+  }
+
+  .ftMainClmnsHldr {
+    grid-template-columns: calc(50% - 40px) 14% 14% 20%;
+    gap: 20px;
+  }
+
+  .ftNewsForm .newsFieldHldr .field input {
+    min-height: 50px;
+  }
+
+  .ftNewsForm .newsFieldHldr .fieldBtnHldr .fieldBtn button {
+    padding: 11px 17px;
+  }
+
+  .ftNewsForm .newsFieldHldr .field input[type="email"] {
+    min-height: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 770px) {
+
+  .imageContentSect,
+  .prodCardsSect,
+  .collectionCardsSect,
+  .featuredProdSect,
+  .stepsSect,
+  .imgBoxesSect,
+  .testimonialSect,
+  .faqSect,
+  .cardCotnentSect {
+    padding: 60px 0;
+  }
+
+  .heading2 {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  .prodCardsTitleRow p,
+  .collectTitleRow p,
+  .stepsTitleRow p,
+  .testTitleRow p,
+  .faqSectTitleRow p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .announceBarCntntHldr p {
+    font-size: 13px;
+    line-height: 14px;
+  }
+
+  .listIconSlider .listIconHldr span {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .listIconSlider .listIconHldr img {
+    max-width: 20px;
+  }
+
+  .mainBnrCntntHldr {
+    grid-template-columns: 1fr;
+  }
+
+  .mainBnrContent {
+    padding: 50px 20px 0px 20px;
+  }
+
+  .mainBnrHeroImg img {
+    max-width: 520px;
+    margin-top: -140px;
+  }
+
+  .mainBnrProdImg {
+    left: initial;
+    right: 260px;
+  }
+
+  .mainBnrProdImg img {
+    max-width: 300px;
+  }
+
+  .mainBnrContent h1 {
+    font-size: 60px;
+    line-height: 58px;
+    max-width: 500px;
+  }
+
+  .mainBnrContent p {
+    font-size: 17px;
+    max-width: 430px;
+  }
+
+  .iconBoxesHldr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .iconBoxesHldr .iconBox p {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .imgCntntClmnHldr {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .imgCntntImage img {
+    max-width: 75%;
+  }
+
+  .imgCntntContnet span {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .imgCntntContnet h2.small {
+    font-size: 34px;
+    line-height: 36px;
+  }
+
+  .imgCntntContnet p {
+    font-size: 17px;
+  }
+
+  .imgCntntContnet .btnHldr {
+    margin-top: 40px;
+  }
+
+  .imgCntntContnet p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .imgIngredientsHldr ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .videoRow {
+    height: 430px;
+    max-height: 430px;
+  }
+
+  .videoSect {
+    height: 860px;
+  }
+
+  .videoCntntRow {
+    height: 430px;
+    padding: 40px 0;
+  }
+
+  .videoCntntHldr h2,
+  .videoCntntHldr p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .videoCntntHldr ul li {
+    gap: 10px;
+  }
+
+  .videoCntntHldr ul li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .videContentHldr {
+    gap: 20px;
+  }
+
+  .videoCntntHldr ul:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .videoCntntHldr ul li img {
+    max-width: 20px;
+  }
+
+  .prodCardsRow {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+  }
+
+  .product-card-wrapper .card__content .card__information .card__heading,
+  .product-card-wrapper .card__content .card__information .price .price-item {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .imgCntntContnet h2.heading2 {
+    margin-bottom: 20px;
+  }
+
+  .imgCntntClmnHldr.invertedClmns .imgCntntImage {
+    order: 1;
+  }
+
+  .imgCntntClmnHldr.invertedClmns .imgCntntContnet {
+    order: 2;
+  }
+
+  .imgCntntContnet ul li span {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+
+  .imgCntntContnet ul li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .collectCardsRow,
+  .stepsCntntRow {
+    margin: 40px 0;
+  }
+
+  .collectCardsRow {
+    grid-template-columns: repeat(4, 3fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .collectionCard:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .collectionCard:nth-child(2),
+  .collectionCard:nth-child(3) {
+    grid-row: span 1;
+  }
+
+  .collectionCard .collectCardContent h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .imgCntntImageHldr img {
+    max-width: 250px;
+  }
+
+  .imgCntntContentHldr {
+    gap: 20px;
+  }
+
+  .imgCntntTextHldr h2 {
+    margin-bottom: 20px;
+  }
+
+  .imgCntntTextHldr .tagline {
+    margin-top: 20px;
+  }
+
+  .imgCntntTextHldr .tagline span {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .imgCntntBgFilledSect::before {
+    width: 400px;
+  }
+
+  .stepsCntntRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stepBox .stepBoxIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stepBox .stepBoxText h3 {
+    font-size: 23px;
+    line-height: 23px;
+  }
+
+  .stepBox .stepBoxText {
+    padding-top: 15px;
+    row-gap: 12px;
+  }
+
+  .imgBoxClmnHldr {
+    grid-template-columns: 1fr;
+  }
+
+  .imgBoxTextHldr h2 {
+    margin-bottom: 20px;
+    max-width: 350px;
+  }
+
+  .imgBoxTextHldr span {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .imgBoxTextHldr p {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .imgBoxTextHldr .btnHldr {
+    margin-top: 40px;
+  }
+
+  .imageBox .imageBoxImage img {
+    max-width: 50%;
+  }
+
+  .testBoxesHldr {
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ctaCntntHldr {
+    padding: 60px 40px;
+    background-size: cover;
+  }
+
+  .ctaCntntHldr h2 {
+    margin-bottom: 20px;
+  }
+
+  .ctaCntntHldr .btnHldr {
+    margin-top: 30px;
+  }
+
+  .faqItemsHldr {
+    margin-top: 40px;
+  }
+
+  .blogCardsContentHldr h2 {
+    margin-bottom: 20px;
+  }
+
+  .blogCardsContentHldr p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .blogCardsContentHldr p {
+    font-size: 18px;
+  }
+
+  .blogCardsContentHldr .btnHldr {
+    margin-top: 40px;
+  }
+
+  .blogCardsClmnsHldr {
+    gap: 30px;
+  }
+
+  .article-card-wrapper {
+    padding: 10px 10px 20px 10px;
+  }
+
+  .cardCotnentCntntHldr h2 {
+    margin-bottom: 20px;
+  }
+
+  .cardCotnentCntntHldr span {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .cardCotnentCntntHldr p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .cardCotnentCntntHldr p {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .cardCotnentInnerHldr {
+    gap: 30px;
+  }
+
+  .cardContentMainHldr {
+    padding: 20px;
+  }
+
+  .footerTopLogo img {
+    max-width: 100px;
+  }
+
+  .footerTopSocial {
+    margin-top: 20px;
+    padding: 8px;
+  }
+
+  .footerDiscHldr p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .footerDiscHldr {
+    padding: 13px 15px 11px;
+  }
+
+  .ftMainClmnsHldr {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+  }
+
+  .ftNewsLetter {
+    grid-column: span 3;
+  }
+
+  .ftMainClmnsHldr .ftNewsLetter p {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 500px;
+  }
+
+  .ftNewsForm {
+    margin-top: 20px;
+  }
+
+  .ftMainClmnsHldr :is(.ftMenuHldr, .ftContactHldr) ul li :is(a, p) {
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  .ftNewsForm .newsFieldHldr .field input {
+    min-height: 45px;
+  }
+
+  .ftNewsForm .newsFieldHldr .field input[type="email"] {
+    min-height: 30px;
+  }
+
+  .ftNewsForm .newsFieldHldr .fieldBtnHldr .fieldBtn :is(button, input)[type="submit"] {
+    padding: 9px 18px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .ftNewsForm .newsFieldHldr .fieldBtnHldr {
+    padding: 3px;
+  }
+
+  .ftMainClmnsHldr .ftMenuHldr ul li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .ftMainClmnsHldr .ftContactHldr ul li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .footerTopSocial ul {
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+
+  .imageContentSect,
+  .prodCardsSect,
+  .collectionCardsSect,
+  .featuredProdSect,
+  .stepsSect,
+  .imgBoxesSect,
+  .testimonialSect,
+  .faqSect,
+  .cardCotnentSect {
+    padding: 40px 0;
+  }
+
+  .heading2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .prodCardsTitleRow p,
+  .collectTitleRow p,
+  .stepsTitleRow p,
+  .testTitleRow p,
+  .faqSectTitleRow p {
+    font-size: 17px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+
+  .headIconsHldr ul :is(img, svg) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .announceBarCntntHldr p {
+    font-size: 12px;
+  }
+
+  .listIconSlider .listIconHldr span {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .listIconSlider .listIconHldr img {
+    max-width: 18px;
+  }
+
+  .mainBnrContent {
+    padding: 30px 15px 0px 15px;
+  }
+
+  .mainBnrContent span {
+    font-size: 12px;
+  }
+
+  .mainBnrContent h1 {
+    font-size: 44px;
+    line-height: 44px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .mainBnrContent p {
+    font-size: 16px;
+  }
+
+  .mainBnrContent .btnHldr {
+    margin-top: 30px;
+  }
+
+  .mainBnrHeroImg img {
+    margin-top: 0;
+  }
+
+  .mainBnrCntntHldr {
+    gap: 20px;
+  }
+
+  .mainBnrProdImg {
+    right: 0;
+    left: 10px;
+  }
+
+  .mainBnrProdImg img {
+    max-width: 200px;
+  }
+
+  .mainBnrProdImg img {
+    max-width: 200px;
+  }
+
+  .mainBannerSect {
+    margin-bottom: 40px;
+  }
+
+  .iconBoxesHldr {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .iconBoxesHldr .iconBox img {
+    max-width: 50px;
+    margin-bottom: 20px;
+  }
+
+  .imgCntntImage img {
+    max-width: 100%;
+  }
+
+  .imgIngredientsHldr ul li img {
+    max-width: 30px;
+  }
+
+  .imgIngredientsHldr {
+    padding: 10px 5px;
+    max-width: 60px;
+  }
+
+  .imgCntntContnet span {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .imgCntntContnet h2.small {
+    font-size: 27px;
+    line-height: 30px;
+  }
+
+  .imgCntntContnet p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .imgCntntContnet .btnHldr {
+    margin-top: 30px;
+  }
+
+  .videContentHldr {
+    grid-template-columns: 1fr;
+  }
+
+  .videoCntntHldr p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .videoCntntHldr ul li span {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .prodCardsRow {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+  }
+
+  .product-card-wrapper .card__media img {
+    max-width: 40%;
+  }
+
+  .imgCntntContnet ul li span {
+    font-size: 16px;
+  }
+
+  .imgCntntContnet ul {
+    padding-left: 20px;
+  }
+
+  .imgCntntContnet ul li::marker {
+    font-size: 14px;
+  }
+
+  .collectCardsRow,
+  .stepsCntntRow {
+    margin: 30px 0;
+  }
+
+  .product-card-wrapper .card__media img {
+    max-width: 40%;
+  }
+
+  .imgCntntContnet ul li span {
+    font-size: 16px;
+  }
+
+  .imgCntntContnet ul {
+    padding-left: 20px;
+  }
+
+  .imgCntntContnet ul li::marker {
+    font-size: 14px;
+  }
+
+  .collectCardsRow {
+    grid-template-columns: repeat(2, 3fr);
+    grid-template-rows: initial;
+  }
+
+  .collectionCard {
+    grid-row: initial;
+    min-height: 200px;
+    max-height: 200px;
+  }
+
+  .imgCntntContentHldr {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+  }
+
+  .imgCntntImageHldr img {
+    max-width: 200px;
+  }
+
+  .imgCntntTextHldr p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .imgCntntTextHldr .tagline span {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .stepsCntntRow {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .stepBox .stepBoxText h3 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .stepBox .stepBoxText {
+    row-gap: 10px;
+  }
+
+  .imgBoxTextHldr p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .imgBoxTextHldr .btnHldr {
+    margin-top: 30px;
+  }
+
+  .imgBoxTextHldr span {
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  .imgBoxBoxesHldr {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: initial;
+  }
+
+  .imgBoxBoxesHldr .imageBox:last-child {
+    grid-column: span 1;
+  }
+
+  .imageBox .imageBoxImage {
+    margin-top: -75px;
+  }
+
+  .imageBox .imageBoxImage img {
+    max-width: 40%;
+  }
+
+  .testBoxesHldr {
+    margin-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .testBoxesHldr {
+    margin-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ctaCntntHldr {
+    padding: 50px 30px;
+  }
+
+  .ctaCntntHldr p {
+    font-size: 18px;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .ctaCntntHldr .btnHldr {
+    margin-top: 25px;
+  }
+
+  .faqSectTitleRow {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+
+  .accordion-item-header {
+    padding: 20px;
+  }
+
+  .accordion-item-header .accordion-item-icon img {
+    width: 18px;
+  }
+
+  .accordion-item-body-content {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .accordion-item-body-content p {
+    line-height: 22px;
+  }
+
+  .accordion-item-header h3 {
+    line-height: 22px;
+  }
+
+  .faqItemsHldr .faqInnerHldr .accordion-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .blogCardsboxesHldr {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .blogCardsSect {
+    padding: 40px 0;
+  }
+
+  .blogCardsContentHldr p {
+    font-size: 16px;
+  }
+
+  .blogCardsContentHldr p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .blogCardsContentHldr .btnHldr {
+    margin-top: 30px;
+  }
+
+  .cardCotnentInnerHldr {
+    grid-template-columns: 1fr;
+  }
+
+  .cardCotnentCntntHldr {
+    order: 2;
+  }
+
+  .cardCotnentImageHldr {
+    order: 1;
+  }
+
+  .cardCotnentCntntHldr span {
+    font-size: 18px;
+  }
+
+  .cardCotnentCntntHldr p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .cardCotnentCntntHldr .cardDisclaimer {
+    margin-top: 15px;
+  }
+
+  .footerTopSocial ul {
+    gap: 15px;
+  }
+
+  .footerMainHldr {
+    padding: 30px 0;
+  }
+
+  .ftMainClmnsHldr {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ftNewsLetter {
+    grid-column: span 1;
+  }
+
+  .ftMainClmnsHldr :is(.ftMenuHldr, .ftContactHldr) ul li :is(a, p) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .ftNewsForm .newsFieldHldr {
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 10px;
+  }
+
+  .ftMainClmnsHldr .ftContactHldr ul li:not(:last-child),
+  .ftMainClmnsHldr .ftMenuHldr ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .ftMainClmnsHldr h3 {
+    margin-bottom: 15px;
+  }
+
+  .ftNewsForm .newsFieldHldr .fieldBtnHldr {
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 10px;
+    background: transparent;
+    padding: 0;
+  }
+
+  .ftNewsForm .newsFieldHldr .fieldBtnHldr .fieldBtn :is(button, input)[type="submit"] {
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 18px 13px;
+  }
+
+  .ftNewsForm .newsFieldHldr .field input[type="email"] {
+    min-height: 45px;
+  }
+}

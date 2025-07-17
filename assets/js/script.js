@@ -76,7 +76,7 @@
       speed: 5500,
       breakpoints: {
         150: {
-          spaceBetween: 15,
+          spaceBetween: 20,
         },
         576: {
           spaceBetween: 20,
