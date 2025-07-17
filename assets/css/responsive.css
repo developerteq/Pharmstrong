@@ -154,10 +154,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .product-card-wrapper .card__media img {
-    max-width: 45%;
-  }
-
   .collectCardsRow,
   .stepsCntntRow {
     margin: 50px 0;
@@ -929,10 +925,6 @@
     margin: 16px auto 0;
   }
 
-  .product-card-wrapper .card__media img {
-    max-width: 40%;
-  }
-
   .imgCntntContnet ul li:not(:last-child) {
     margin-bottom: 15px;
   }
@@ -952,10 +944,6 @@
   .collectCardsRow,
   .stepsCntntRow {
     margin: 30px 0;
-  }
-
-  .product-card-wrapper .card__media img {
-    max-width: 40%;
   }
 
   .imgCntntContnet ul li span {
