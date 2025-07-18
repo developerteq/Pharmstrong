@@ -1,6 +1,9 @@
 {
+  AOS.init({ duration: 650 });
+}
+{
   const lenis = new Lenis({
-    duration: 1,
+    duration: 1.5,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   });
   function raf(time) {
@@ -8,6 +11,45 @@
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+}
+
+{
+  function initVideoScrollTriggers() {
+    // Clear any existing ScrollTriggers first
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
+    // Only initialize if screen width is ≥1025px
+    if (window.innerWidth >= 1025) {
+      gsap.utils.toArray(".videoRowScript").forEach((panel, i) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top top",
+          end: "+=100%",
+          pin: true,
+          pinSpacing: false,
+          scrub: 1,
+          snap: {
+            snapTo: 1,
+            duration: { min: 1, max: 1 },
+          },
+        });
+      });
+    }
+  }
+
+  // Initialize on page load
+  document.addEventListener("DOMContentLoaded", initVideoScrollTriggers);
+
+  // Also initialize when GSAP is ready (if loading GSAP async)
+  gsap.registerPlugin(ScrollTrigger);
+  gsap && gsap.core && initVideoScrollTriggers();
+
+  // Handle window resize
+  window.addEventListener("resize", function () {
+    // Debounce to prevent multiple calls during resize
+    clearTimeout(window.resizeTimer);
+    window.resizeTimer = setTimeout(initVideoScrollTriggers, 100);
+  });
 }
 
 {

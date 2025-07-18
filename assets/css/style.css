@@ -226,6 +226,7 @@ section.noTopSpace {
 /* Main Banner Style Start */
 .mainBannerSect {
   margin-bottom: 60px;
+  overflow: hidden;
 }
 
 .mainBnrListSlider {
@@ -370,6 +371,7 @@ section.noTopSpace {
 /* Image With Content Style Start */
 .imageContentSect {
   padding: 100px 0;
+  overflow: hidden;
 }
 
 .imgCntntClmnHldr {
@@ -569,16 +571,18 @@ section.noTopSpace {
 .videoRow video {
   width: 100%;
   display: block;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .videoCntntRow {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 100px 0;
-  position: relative;
+  padding: 100px 0 !important;
+  position: relative !important;
   z-index: 2;
-  height: 100vh;
+  height: 100vh !important;
   align-content: center;
 }
 
@@ -594,6 +598,7 @@ section.noTopSpace {
 .videoSect {
   position: relative;
   height: 200vh;
+  overflow: hidden !important;
 }
 
 .videoRow {
@@ -652,6 +657,10 @@ section.noTopSpace {
 
 .videoMaskHldr img {
   max-width: 440px;
+}
+
+.videoMaskHldr video {
+  display: none;
 }
 
 /* Video Section Style End */
