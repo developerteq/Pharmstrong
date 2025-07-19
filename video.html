@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video | Pharmstrong Website</title>
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  <style>
+    header,
+    section,
+    nav,
+    footer {
+      width: 100%;
+      display: block;
+    }
+
+    .videoSect {
+      height: 100vh;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .videoRowScript {
+      width: 100%;
+      height: 100vh;
+    }
+
+    [data-scrollbar] {
+      display: block;
+      position: relative;
+    }
+
+    .videoCntntRow {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <section class="videoSect">
+    <div class="videoRow videoRowScript">
+      <video autoplay muted loop>
+        <source src="assets/video/video-sect.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="videoCntntRow videoRowScript" style="background-image: url(assets/images/video-content-bg.png);">
+      <div class="container">
+        <div class="videContentHldr">
+          <div class="videoMaskHldr" data-aos="zoom-in">
+
+          </div>
+          <div class="videoCntntHldr" data-aos="fade-up">
+            <h2 class="heading2">When every day feels like an uphill climb</h2>
+            <p> Life can throw us curveballs, making it difficult to keep up with our daily routines.</p>
+            <ul>
+              <li><img src="assets/images/checked-icon-filled.svg" alt=""><span>Struggling through workouts that used to
+                  energize you?</span></li>
+              <li><img src="assets/images/checked-icon-filled.svg" alt=""><span>Missing out on adventures because of
+                  nagging aches?</span></li>
+              <li><img src="assets/images/checked-icon-filled.svg" alt=""><span>Feeling drained before the day even
+                  begins?</span></li>
+            </ul>
+            <p>We’ve been there and know how it feels when your body and mind just won’t cooperate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+  <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+
+
+    let bodyScrollBar = Scrollbar.init(document.body, { damping: 0.1, delegateTo: document });
+    ScrollTrigger.scrollerProxy(".videoSect", {
+      scrollTop(value) {
+        if (arguments.length) {
+          bodyScrollBar.scrollTop = value;
+        }
+        return bodyScrollBar.scrollTop;
+      }
+    });
+    bodyScrollBar.addListener(ScrollTrigger.update);
+
+    const sections = document.body.querySelectorAll(".videoRowScript");
+
+    let isScrolling = true;
+
+    function goToSection(section, anim) {
+
+      var viewportOffset = section.getBoundingClientRect();
+
+
+      if (isScrolling) {
+        isScrolling = false;
+        bodyScrollBar.scrollTo(0, bodyScrollBar.scrollTop + viewportOffset.top, 1000, {
+          callback: () => isScrolling = true,
+        });
+      }
+
+      anim && anim.restart();
+    }
+
+    sections.forEach(section => {
+      const intoAnim = gsap.from(section, { autoAlpha: 0, translateY: 0 });
+
+      ScrollTrigger.create({
+        trigger: section,
+        end: "bottom top+=2",
+        scroller: ".videoSect",
+
+        onEnter: () => goToSection(section, intoAnim),
+        onEnterBack: () => goToSection(section, intoAnim)
+      });
+
+    });
+  </script>
+</body>
+
+</html>
