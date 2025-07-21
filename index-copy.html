@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmstrong Website</title>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css">
+  <!-- Styling Files Links -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- Styling Files Links -->
+  <style>
+    .videoSect {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .videoSect video {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      height: 100%;
+
+    }
+
+    .videoSect .videoRowScript {
+      position: absolute;
+      background-image: none !important;
+      background-color: #ECF5F6;
+    }
+
+    .videoMaskHldr video {
+      display: block;
+      border-radius: 50%;
+    }
+
+    .videoMaskHldr {
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 1px solid #000;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Icon Boxes Section -->
+  <section class="iconBoxesSect">
+    <div class="container">
+      <div class="iconBoxesHldr">
+        <div class="iconBox" data-aos="fade-up">
+          <img src="assets/images/iconBoxes-icon1.svg" alt="">
+          <p>Noticeable relief in minutes, no mess or guesswork</p>
+        </div>
+
+        <div class="iconBox" data-aos="fade-up">
+          <img src="assets/images/iconBoxes-icon2.svg" alt="">
+          <p>Energy and focus when life demands your best</p>
+        </div>
+
+        <div class="iconBox" data-aos="fade-up">
+          <img src="assets/images/iconBoxes-icon3.svg" alt="">
+          <p>Enjoy life again, with safe, non-habit forming support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image With Content Section -->
+  <section class="imageContentSect">
+    <div class="container">
+      <div class="imgCntntClmnHldr">
+        <div class="imgCntntImage" data-aos="zoom-in">
+          <img src="assets/images/customer-fav-hero-img.png" alt="">
+          <div class="imgIngredientsHldr" data-aos="fade-right" data-aos-delay="500">
+            <ul>
+              <li><img src="assets/images/ingred-icon-1.svg" alt=""><span>Hemp Extract</span></li>
+              <li><img src="assets/images/ingred-icon-2.svg" alt=""><span>Organic Aloe Vera</span></li>
+              <li><img src="assets/images/ingred-icon-3.svg" alt=""><span>Full Spectrum CBD</span></li>
+              <li><img src="assets/images/ingred-icon-4.svg" alt=""><span>Tea Tree Oil</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="imgCntntContnet" data-aos="fade-up">
+          <span>Customer favorite</span>
+          <h2 class="small">HD2000 Hemp Gel Roller</h2>
+          <p>Fast-acting, deeply soothing, and always reliable</p>
+          <p>Our best-selling, mess-free roller offers fast, cooling comfort so you can get back to doing what you love
+            without missing a beat.*</p>
+          <div class="btnHldr" data-aos="fade-up" data-aos-delay="200">
+            <a href=""><span>Shop HD2000</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Icon Boxes Section -->
+  <section class="iconBoxesSect">
+    <div class="container">
+      <div class="iconBoxesHldr">
+        <div class="iconBox" data-aos="fade-up">
+          <img src="assets/images/iconBoxes-icon1.svg" alt="">
+          <p>Noticeable relief in minutes, no mess or guesswork</p>
+        </div>
+
+        <div class="iconBox" data-aos="fade-up">
+          <img src="assets/images/iconBoxes-icon2.svg" alt="">
+          <p>Energy and focus when life demands your best</p>
+        </div>
+
+        <div class="iconBox" data-aos="fade-up">
+          <img src="assets/images/iconBoxes-icon3.svg" alt="">
+          <p>Enjoy life again, with safe, non-habit forming support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image With Content Section -->
+  <section class="imageContentSect">
+    <div class="container">
+      <div class="imgCntntClmnHldr">
+        <div class="imgCntntImage" data-aos="zoom-in">
+          <img src="assets/images/customer-fav-hero-img.png" alt="">
+          <div class="imgIngredientsHldr" data-aos="fade-right" data-aos-delay="500">
+            <ul>
+              <li><img src="assets/images/ingred-icon-1.svg" alt=""><span>Hemp Extract</span></li>
+              <li><img src="assets/images/ingred-icon-2.svg" alt=""><span>Organic Aloe Vera</span></li>
+              <li><img src="assets/images/ingred-icon-3.svg" alt=""><span>Full Spectrum CBD</span></li>
+              <li><img src="assets/images/ingred-icon-4.svg" alt=""><span>Tea Tree Oil</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="imgCntntContnet" data-aos="fade-up">
+          <span>Customer favorite</span>
+          <h2 class="small">HD2000 Hemp Gel Roller</h2>
+          <p>Fast-acting, deeply soothing, and always reliable</p>
+          <p>Our best-selling, mess-free roller offers fast, cooling comfort so you can get back to doing what you love
+            without missing a beat.*</p>
+          <div class="btnHldr" data-aos="fade-up" data-aos-delay="200">
+            <a href=""><span>Shop HD2000</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="videoSect">
+    <div class="videoRow videoRowScript">
+      <video autoplay muted loop>
+        <source src="assets/video/video-sect.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="videoCntntRow videoRowScript" style="background-image: url(assets/images/video-content-bg.png);">
+      <div class="container">
+        <div class="videContentHldr">
+          <div class="videoMaskHldr" data-aos="zoom-in">
+            <video autoplay muted loop playsinline>
+              <source src="assets/video/video-sect.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="videoCntntHldr" data-aos="fade-up">
+            <h2 class="heading2">When every day feels like an uphill climb</h2>
+            <p> Life can throw us curveballs, making it difficult to keep up with our daily routines.</p>
+            <ul>
+              <li><img src="assets/images/checked-icon-filled.svg" alt=""><span>Struggling through workouts that used to
+                  energize you?</span></li>
+              <li><img src="assets/images/checked-icon-filled.svg" alt=""><span>Missing out on adventures because of
+                  nagging aches?</span></li>
+              <li><img src="assets/images/checked-icon-filled.svg" alt=""><span>Feeling drained before the day even
+                  begins?</span></li>
+            </ul>
+            <p>We’ve been there and know how it feels when your body and mind just won’t cooperate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Cards Section -->
+  <section class="prodCardsSect">
+    <div class="container">
+      <div class="prodCardsTitleRow" data-aos="fade-up">
+        <h2 class="heading2">Our most loved remedies</h2>
+        <p>Discover the top picks our customers rely on for real support.</p>
+      </div>
+      <div class="prodCardsRow">
+        <div class="product-card-wrapper" data-aos="fade-up">
+          <div class="card">
+            <div class="card__inner">
+              <div class="card__media">
+                <div class="media">
+                  <img src="assets/images/prod-img-1.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__information">
+                <h3 class="card__heading">
+                  <a href="#">Dreamy Tea Sleep Gummies</a>
+                </h3>
+                <div class="price">
+                  <div class="price__container">
+                    <div class="price__sale">
+                      <span>
+                        <s class="price-item price-item--regular">
+                          $44.95
+                        </s>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="prod_excerpt">
+                  <p>Unwind naturally. Crafted to promote calm evenings and restful nights.*</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card-wrapper" data-aos="fade-up">
+          <div class="card">
+            <div class="card__inner">
+              <div class="card__media">
+                <div class="media">
+                  <img src="assets/images/prod-img-2.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__information">
+                <h3 class="card__heading">
+                  <a href="#">CBD Daily Formula Softgels</a>
+                </h3>
+                <div class="price">
+                  <div class="price__container">
+                    <div class="price__sale">
+                      <span>
+                        <s class="price-item price-item--regular">
+                          $69.95
+                        </s>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="prod_excerpt">
+                  <p>Gentle daily support to help you manage everyday stress and maintain your rhythm.*</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card-wrapper" data-aos="fade-up">
+          <div class="card">
+            <div class="card__inner">
+              <div class="card__media">
+                <div class="media">
+                  <img src="assets/images/prod-img-3.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__information">
+                <h3 class="card__heading">
+                  <a href="#">FOCUS Oral Drops</a>
+                </h3>
+                <div class="price">
+                  <div class="price__container">
+                    <div class="price__sale">
+                      <span>
+                        <s class="price-item price-item--regular">
+                          $129.95
+                        </s>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="prod_excerpt">
+                  <p>Unwind naturally. Crafted to promote calm evenings and restful nights.*</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-card-wrapper" data-aos="fade-up">
+          <div class="card">
+            <div class="card__inner">
+              <div class="card__media">
+                <div class="media">
+                  <img src="assets/images/prod-img-4.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__information">
+                <h3 class="card__heading">
+                  <a href="#">CBD Dog Treats – Peanut Butter</a>
+                </h3>
+                <div class="price">
+                  <div class="price__container">
+                    <div class="price__sale">
+                      <span>
+                        <s class="price-item price-item--regular">
+                          $43.95
+                        </s>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="prod_excerpt">
+                  <p>Gentle daily support to help you manage everyday stress and maintain your rhythm.*</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image With Content Section -->
+  <section class="imageContentSect noTopSpace">
+    <div class="container">
+      <div class="imgCntntClmnHldr invertedClmns">
+        <div class="imgCntntImage" data-aos="zoom-in">
+          <img src="assets/images/help-hero-img.png" alt="">
+        </div>
+        <div class="imgCntntContnet" data-aos="fade-up">
+          <h2 class="heading2">Here’s how we help</h2>
+          <p>Natural CBD wellness support that fits into your life, not the other way around.</p>
+          <ul>
+            <li><span>Get back to what moves you</span>Our CBD products are crafted to help ease tension and support
+              mobility so you can keep doing what you love.*</li>
+            <li><span>Feel confident in your choice</span>Lab-tested, organic, and non-habit forming. Always clean,
+              always conscious.</li>
+            <li><span>Enjoy more energy and joy</span>Feel more like yourself again - clear, capable, and grounded.*
+            </li>
+          </ul>
+          <div class="btnHldr" data-aos="fade-up" data-aos-delay="200">
+            <a href=""><span>Shop now</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections Cards Section -->
+  <section class="collectionCardsSect">
+    <div class="container">
+      <div class="collectTitleRow" data-aos="fade-up">
+        <h2 class="heading2">Support for your unique wellness goals</h2>
+        <p>Explore targeted collections tailored to different areas of your life.</p>
+      </div>
+      <div class="collectCardsRow">
+        <div class="collectionCard" data-aos="zoom-in">
+          <div class="collectCardImg">
+            <img src="assets/images/collection-img-1.jpg" alt="">
+          </div>
+          <div class="collectCardContent">
+            <h3><a href="">Muscle & Joint Relief</a></h3>
+          </div>
+        </div>
+        <div class="collectionCard" data-aos="zoom-in">
+          <div class="collectCardImg">
+            <img src="assets/images/collection-img-2.jpg" alt="">
+          </div>
+          <div class="collectCardContent">
+            <h3><a href="">Skin Care</a></h3>
+          </div>
+        </div>
+        <div class="collectionCard" data-aos="zoom-in">
+          <div class="collectCardImg">
+            <img src="assets/images/collection-img-3.jpg" alt="">
+          </div>
+          <div class="collectCardContent">
+            <h3><a href="">Better Sleep</a></h3>
+          </div>
+        </div>
+        <div class="collectionCard" data-aos="zoom-in">
+          <div class="collectCardImg">
+            <img src="assets/images/collection-img-4.jpg" alt="">
+          </div>
+          <div class="collectCardContent">
+            <h3><a href="">Stress Support</a></h3>
+          </div>
+        </div>
+        <div class="collectionCard" data-aos="zoom-in">
+          <div class="collectCardImg">
+            <img src="assets/images/collection-img-5.jpg" alt="">
+          </div>
+          <div class="collectCardContent">
+            <h3><a href="">Sharper Focus</a></h3>
+          </div>
+        </div>
+        <div class="collectionCard" data-aos="zoom-in">
+          <div class="collectCardImg">
+            <img src="assets/images/collection-img-6.jpg" alt="">
+          </div>
+          <div class="collectCardContent">
+            <h3><a href="">Pet Wellness</a></h3>
+          </div>
+        </div>
+        <div class="collectionCard" data-aos="zoom-in">
+          <div class="collectCardImg">
+            <img src="assets/images/collection-img-7.jpg" alt="">
+          </div>
+          <div class="collectCardContent">
+            <h3><a href="">Hormone & Sexual Health</a></h3>
+          </div>
+        </div>
+      </div>
+      <div class="collectBtnRow">
+        <div class="btnHldr" data-aos="fade-up" data-aos-delay="200">
+          <a href=""><span>Shop our collections</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> -->
+  <!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script> -->
+
+  <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=v3.12.6"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- <script src="assets/js/script.js"></script> -->
+  <script>AOS.init({ duration: 650 });</script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    let allowScroll = true; // sometimes we want to ignore scroll-related stuff, like when an Observer-based section is transitioning.
+    let scrollTimeout = gsap.delayedCall(1, () => allowScroll = true).pause(); // controls how long we should wait after an Observer-based animation is initiated before we allow another scroll-related action
+    let currentIndex = 0;
+    let swipePanels = gsap.utils.toArray(".videoSect .videoRowScript");
+
+    // set z-index levels for the swipe panels
+    gsap.set(swipePanels, { zIndex: i => swipePanels.length - i })
+
+    // create an observer and disable it to start
+    let intentObserver = ScrollTrigger.observe({
+      type: "wheel,touch",
+      onUp: () => allowScroll && gotoPanel(currentIndex - 1, false),
+      onDown: () => allowScroll && gotoPanel(currentIndex + 1, true),
+      tolerance: 10,
+      preventDefault: true,
+      onEnable(self) {
+        allowScroll = false;
+        scrollTimeout.restart(true);
+        // when enabling, we should save the scroll position and freeze it. This fixes momentum-scroll on Macs, for example.
+        let savedScroll = self.scrollY();
+        self._restoreScroll = () => self.scrollY(savedScroll); // if the native scroll repositions, force it back to where it should be
+        document.addEventListener("scroll", self._restoreScroll, { passive: false });
+      },
+      onDisable: self => document.removeEventListener("scroll", self._restoreScroll)
+    });
+    intentObserver.disable();
+
+    // handle the panel swipe animations
+    function gotoPanel(index, isScrollingDown) {
+      // return to normal scroll if we're at the end or back up to the start
+      if ((index === swipePanels.length && isScrollingDown) || (index === -1 && !isScrollingDown)) {
+        intentObserver.disable(); // resume native scroll
+        return;
+      }
+      allowScroll = false;
+      scrollTimeout.restart(true);
+
+      let currentPanel = swipePanels[currentIndex];
+      let targetPanel = swipePanels[index];
+
+      gsap.set(currentPanel, { opacity: 1 }); // Reset opacity of current panel
+      gsap.set(targetPanel, { opacity: 0 }); // Set opacity of target panel to 0, so it fades in
+
+      gsap.to(currentPanel, { opacity: 0, duration: 0.75 });
+      gsap.to(targetPanel, { opacity: 1, duration: 0.75 });
+
+      currentIndex = index;
+    }
+
+    // pin swipe section and initiate observer
+    ScrollTrigger.create({
+      trigger: ".videoSect",
+      pin: true,
+      start: "top top",
+      end: "+=200", // just needs to be enough to not risk vibration where a user's fast-scroll shoots way past the end
+      onEnter: (self) => {
+        if (intentObserver.isEnabled) { return } // in case the native scroll jumped past the end and then we force it back to where it should be.
+        self.scroll(self.start + 1); // jump to just one pixel past the start of this section so we can hold there.
+        intentObserver.enable(); // STOP native scrolling
+      },
+      onEnterBack: (self) => {
+        if (intentObserver.isEnabled) { return } // in case the native scroll jumped backward past the start and then we force it back to where it should be.
+        self.scroll(self.end - 1); // jump to one pixel before the end of this section so we can hold there.
+        intentObserver.enable(); // STOP native scrolling
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

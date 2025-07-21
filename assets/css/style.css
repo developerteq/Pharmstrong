@@ -581,7 +581,7 @@ section.noTopSpace {
   background-size: cover;
   padding: 100px 0 !important;
   position: relative !important;
-  z-index: 2;
+  z-index: 9;
   height: 100vh !important;
   align-content: center;
 }
@@ -602,14 +602,14 @@ section.noTopSpace {
 }
 
 .videoRow {
-  position: sticky;
+  /* position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; */
   height: 100vh;
   max-height: 100vh;
-  z-index: 1;
-  overflow: hidden;
+  /* z-index: 1;
+  overflow: hidden; */
 }
 
 .videoCntntHldr h2 {
