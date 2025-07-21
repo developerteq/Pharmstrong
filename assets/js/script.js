@@ -1,17 +1,6 @@
 {
   AOS.init({ duration: 650 });
 }
-// {
-//   const lenis = new Lenis({
-//     duration: 0.1,
-//     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-//   });
-//   function raf(time) {
-//     lenis.raf(time);
-//     requestAnimationFrame(raf);
-//   }
-//   requestAnimationFrame(raf);
-// }
 
 // Section by Section Scroll Without Sticky
 // {
@@ -82,71 +71,145 @@
 //   );
 // }
 
-gsap.registerPlugin(ScrollTrigger);
+// {
+//   gsap.registerPlugin(ScrollTrigger);
 
-const panels = gsap.utils.toArray(".videoRowScript");
-let currentIndex = 0;
-let isAnimating = false;
-let snapScrollEnabled = false;
+//   const panels = gsap.utils.toArray(".videoRowScript");
+//   let currentIndex = 0;
+//   let isAnimating = false;
+//   let snapScrollEnabled = false;
 
-// Enable snap when first panel is mostly in view
-ScrollTrigger.create({
-  trigger: panels[0],
-  start: "top 10%",
-  onEnter: () => (snapScrollEnabled = true),
-  onLeaveBack: () => (snapScrollEnabled = false),
-});
+//   // Enable snap when first panel is mostly in view
+//   ScrollTrigger.create({
+//     trigger: panels[0],
+//     start: "top 10%",
+//     onEnter: () => (snapScrollEnabled = true),
+//     onLeaveBack: () => (snapScrollEnabled = false),
+//   });
 
-// Disable snap after last panel scrolls out
-ScrollTrigger.create({
-  trigger: panels[panels.length - 1],
-  start: "bottom bottom",
-  onEnter: () => (snapScrollEnabled = false),
-  onLeaveBack: () => (snapScrollEnabled = true),
-});
+//   // Disable snap after last panel scrolls out
+//   ScrollTrigger.create({
+//     trigger: panels[panels.length - 1],
+//     start: "bottom bottom",
+//     onEnter: () => (snapScrollEnabled = false),
+//     onLeaveBack: () => (snapScrollEnabled = true),
+//   });
 
-// Setup all panels initially
-gsap.set(panels, { autoAlpha: 0 });
-gsap.set(panels[0], { autoAlpha: 1 }); // Show first section
+//   // Setup all panels initially
+//   gsap.set(panels, { autoAlpha: 0 });
+//   gsap.set(panels[0], { autoAlpha: 1 }); // Show first section
 
-function fadeToPanel(index) {
-  if (index < 0 || index >= panels.length || isAnimating) return;
+//   function fadeToPanel(index) {
+//     if (index < 0 || index >= panels.length || isAnimating) return;
 
-  isAnimating = true;
+//     isAnimating = true;
 
-  const current = panels[currentIndex];
-  const next = panels[index];
+//     const current = panels[currentIndex];
+//     const next = panels[index];
 
-  const tl = gsap.timeline({
-    onComplete: () => {
-      currentIndex = index;
-      isAnimating = false;
+//     const tl = gsap.timeline({
+//       onComplete: () => {
+//         currentIndex = index;
+//         isAnimating = false;
+//       },
+//     });
+
+//     tl.to(current, { autoAlpha: 0, duration: 0.4 }).to(
+//       next,
+//       { autoAlpha: 1, duration: 0.4 },
+//       "<"
+//     );
+//   }
+
+//   // Listen for wheel events
+//   window.addEventListener(
+//     "wheel",
+//     (e) => {
+//       if (!snapScrollEnabled || isAnimating) return;
+
+//       const direction = e.deltaY > 0 ? 1 : -1;
+//       const nextIndex = currentIndex + direction;
+
+//       if (nextIndex < 0 || nextIndex >= panels.length) return;
+
+//       e.preventDefault();
+//       fadeToPanel(nextIndex);
+//     },
+//     { passive: false }
+//   );
+// }
+
+// Script For Section by Section Fade Effects
+if (window.matchMedia("(min-width: 1026px)").matches) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  let allowScroll = true;
+  let scrollTimeout = gsap.delayedCall(1, () => (allowScroll = true)).pause();
+  let currentIndex = 0;
+  let swipePanels = gsap.utils.toArray(".videoSect .videoRowScript");
+
+  gsap.set(swipePanels, { zIndex: (i) => swipePanels.length - i });
+
+  let intentObserver = ScrollTrigger.observe({
+    type: "wheel,touch",
+    onUp: () => allowScroll && gotoPanel(currentIndex - 1, false),
+    onDown: () => allowScroll && gotoPanel(currentIndex + 1, true),
+    tolerance: 10,
+    preventDefault: true,
+    onEnable(self) {
+      allowScroll = false;
+      scrollTimeout.restart(true);
+      let savedScroll = self.scrollY();
+      self._restoreScroll = () => self.scrollY(savedScroll);
+      document.addEventListener("scroll", self._restoreScroll, {
+        passive: false,
+      });
+    },
+    onDisable: (self) =>
+      document.removeEventListener("scroll", self._restoreScroll),
+  });
+  intentObserver.disable();
+
+  function gotoPanel(index, isScrollingDown) {
+    if (
+      (index === swipePanels.length && isScrollingDown) ||
+      (index === -1 && !isScrollingDown)
+    ) {
+      intentObserver.disable();
+      return;
+    }
+    allowScroll = false;
+    scrollTimeout.restart(true);
+
+    let currentPanel = swipePanels[currentIndex];
+    let targetPanel = swipePanels[index];
+
+    gsap.set(currentPanel, { opacity: 1 });
+    gsap.set(targetPanel, { opacity: 0 });
+
+    gsap.to(currentPanel, { opacity: 0, duration: 0.75 });
+    gsap.to(targetPanel, { opacity: 1, duration: 0.75 });
+
+    currentIndex = index;
+  }
+
+  ScrollTrigger.create({
+    trigger: ".videoSect",
+    pin: true,
+    start: "top top",
+    end: "+=200",
+    onEnter: (self) => {
+      if (intentObserver.isEnabled) return;
+      self.scroll(self.start + 1);
+      intentObserver.enable();
+    },
+    onEnterBack: (self) => {
+      if (intentObserver.isEnabled) return;
+      self.scroll(self.end - 1);
+      intentObserver.enable();
     },
   });
-
-  tl.to(current, { autoAlpha: 0, duration: 0.4 }).to(
-    next,
-    { autoAlpha: 1, duration: 0.4 },
-    "<"
-  );
 }
-
-// Listen for wheel events
-window.addEventListener(
-  "wheel",
-  (e) => {
-    if (!snapScrollEnabled || isAnimating) return;
-
-    const direction = e.deltaY > 0 ? 1 : -1;
-    const nextIndex = currentIndex + direction;
-
-    if (nextIndex < 0 || nextIndex >= panels.length) return;
-
-    e.preventDefault();
-    fadeToPanel(nextIndex);
-  },
-  { passive: false }
-);
 
 {
   function forFaq() {
