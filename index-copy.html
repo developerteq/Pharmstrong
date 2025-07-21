@@ -17,30 +17,52 @@
   <!-- Styling Files Links -->
   <style>
     /* Add these to your existing CSS */
-    .videoRow video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: none;
-      /* Let GSAP handle all animations */
-    }
-
-    .videoMaskHldr {
+    .videoSect {
       position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
     }
 
-    .videoMaskHldr video {
+    .videoRow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+    }
+
+    .videoRow video {
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0;
-      /* Initially hidden */
     }
 
-    .videoSect .videoRowScript {
-      transition: opacity 0.5s ease;
+    .videoMaskHldr {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid #063A52;
+      padding: 10px;
+      z-index: 9;
+    }
+
+    .videoMaskHldr video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    .videoCntntRow {
+      position: relative;
+      height: 100vh;
+      z-index: 8;
     }
   </style>
 </head>
@@ -203,22 +225,22 @@
     </div>
   </section>
 
-  <!-- Video Section -->
   <section class="videoSect">
-    <div class="videoRow videoRowScript">
-      <video autoplay muted loop>
+    <div class="videoRow">
+      <video autoplay muted loop playsinline>
         <source src="assets/video/video-sect.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="videoCntntRow videoRowScript">
+
+    <div class="videoCntntRow">
       <div class="container">
         <div class="videContentHldr">
-          <div class="videoMaskHldr" data-aos="zoom-in">
-            <video autoplay muted loop>
+          <div class="videoMaskHldr">
+            <video autoplay muted loop playsinline>
               <source src="assets/video/video-sect.mp4" type="video/mp4">
             </video>
           </div>
-          <!-- ... rest of your content ... -->
+          <!-- Your content here -->
         </div>
       </div>
     </div>
@@ -586,116 +608,93 @@
     document.addEventListener('DOMContentLoaded', function () {
       gsap.registerPlugin(ScrollTrigger);
 
-      // Store video elements
+      // Elements
+      const section = document.querySelector('.videoSect');
+      const bgVideoWrapper = document.querySelector('.videoRow');
       const bgVideo = document.querySelector('.videoRow video');
       const maskVideo = document.querySelector('.videoMaskHldr video');
+      const maskContainer = document.querySelector('.videoMaskHldr');
 
-      // Initially hide the mask video
-      gsap.set(maskVideo, { opacity: 0 });
+      // Initial setup
+      maskVideo.src = bgVideo.src;
+      maskVideo.currentTime = bgVideo.currentTime;
+      maskVideo.style.opacity = 0;
+      gsap.set(bgVideo, { position: 'fixed', top: 0, left: 0 });
 
-      let allowScroll = true;
-      let scrollTimeout = gsap.delayedCall(0.1, () => (allowScroll = true)).pause();
-      let currentIndex = 0;
-      let swipePanels = gsap.utils.toArray(".videoSect .videoRowScript");
+      // Store original state
+      const originalState = {
+        width: '100vw',
+        height: '100vh',
+        top: 0,
+        left: 0,
+        borderRadius: 0
+      };
 
-      gsap.set(swipePanels, { zIndex: (i) => swipePanels.length - i });
-
-      let intentObserver = ScrollTrigger.observe({
-        type: "wheel,touch",
-        onUp: () => allowScroll && gotoPanel(currentIndex - 1, false),
-        onDown: () => allowScroll && gotoPanel(currentIndex + 1, true),
-        tolerance: 10,
-        preventDefault: true,
-        onEnable(self) {
-          allowScroll = false;
-          scrollTimeout.restart(true);
-          let savedScroll = self.scrollY();
-          self._restoreScroll = () => self.scrollY(savedScroll);
-          document.addEventListener("scroll", self._restoreScroll, {
-            passive: true,
-          });
-
-          // Animate video transition
-          gsap.to(bgVideo, {
-            width: 400,
-            height: 400,
-            borderRadius: '50%',
-            duration: 0.75,
-            ease: "power2.inOut"
-          });
-
-          gsap.to(bgVideo, {
-            delay: 0.4,
-            duration: 0.5,
-            opacity: 0,
-            onComplete: () => {
-              gsap.to(maskVideo, {
-                opacity: 1,
-                duration: 0.5
-              });
-            }
-          });
-        },
-        onDisable: (self) => {
-          document.removeEventListener("scroll", self._restoreScroll);
-
-          // Revert video transition
-          gsap.to(maskVideo, {
-            opacity: 0,
-            duration: 0.3,
-            onComplete: () => {
-              gsap.to(bgVideo, {
-                width: '100%',
-                height: '100vh',
-                borderRadius: 0,
-                opacity: 1,
-                duration: 0.75,
-                ease: "power2.inOut"
-              });
-            }
-          });
-        }
-      });
-      intentObserver.disable();
-
-      function gotoPanel(index, isScrollingDown) {
-        if (
-          (index === swipePanels.length && isScrollingDown) ||
-          (index === -1 && !isScrollingDown)
-        ) {
-          intentObserver.disable();
-          return;
-        }
-        allowScroll = false;
-        scrollTimeout.restart(true);
-
-        let currentPanel = swipePanels[currentIndex];
-        let targetPanel = swipePanels[index];
-
-        gsap.to(currentPanel, { opacity: 0, duration: 0.5, ease: "power2.out" });
-        gsap.to(targetPanel, { opacity: 1, duration: 0.5, ease: "power2.in", delay: 0.1 });
-
-        currentIndex = index;
+      // Calculate target state
+      function getTargetState() {
+        const maskRect = maskContainer.getBoundingClientRect();
+        const scale = maskRect.width / window.innerWidth;
+        return {
+          width: maskRect.width,
+          height: maskRect.height,
+          x: maskRect.left,
+          y: maskRect.top,
+          scale: scale,
+          borderRadius: '50%'
+        };
       }
 
+      // Create animation timeline
+      const animation = gsap.timeline({ paused: true })
+        .to(bgVideo, {
+          width: getTargetState().width,
+          height: getTargetState().height,
+          x: getTargetState().x,
+          y: getTargetState().y,
+          borderRadius: '50%',
+          duration: 1,
+          ease: "power3.inOut",
+          onUpdate: function () {
+            // Handle z-index during transition
+            if (this.progress() > 0.5) {
+              bgVideoWrapper.style.zIndex = 9;
+            } else {
+              bgVideoWrapper.style.zIndex = 10;
+            }
+          },
+          onComplete: function () {
+            maskVideo.style.opacity = 1;
+            bgVideo.style.opacity = 0;
+          }
+        });
+
+      // ScrollTrigger setup
       ScrollTrigger.create({
-        trigger: ".videoSect",
-        pin: true,
+        trigger: section,
         start: "top top",
-        onEnter: (self) => {
-          if (intentObserver.isEnabled) return;
-          self.scroll(self.start + 1);
-          intentObserver.enable();
-        },
-        onEnterBack: (self) => {
-          if (intentObserver.isEnabled) return;
-          self.scroll(self.end - 1);
-          intentObserver.enable();
-        },
+        end: "bottom bottom",
+        onEnter: () => animation.play(),
+        onEnterBack: () => animation.reverse(),
+        onLeave: () => { },
+        onLeaveBack: () => { }
+      });
+
+      // Reverse animation when scrolling up
+      animation.eventCallback("onReverseComplete", function () {
+        bgVideo.style.opacity = 1;
+        maskVideo.style.opacity = 0;
+        gsap.set(bgVideo, originalState);
+      });
+
+      // Handle resize
+      window.addEventListener('resize', function () {
+        if (animation.progress() > 0) {
+          animation.progress(0).pause();
+          animation.invalidate();
+        }
       });
     });
   </script>
-
 </body>
 
 </html>
