@@ -144,7 +144,9 @@ if (window.matchMedia("(min-width: 1026px)").matches) {
   gsap.registerPlugin(ScrollTrigger);
 
   let allowScroll = true;
-  let scrollTimeout = gsap.delayedCall(1, () => (allowScroll = true)).pause();
+  let scrollTimeout = gsap
+    .delayedCall(0.25, () => (allowScroll = true))
+    .pause();
   let currentIndex = 0;
   let swipePanels = gsap.utils.toArray(".videoSect .videoRowScript");
 
@@ -162,7 +164,7 @@ if (window.matchMedia("(min-width: 1026px)").matches) {
       let savedScroll = self.scrollY();
       self._restoreScroll = () => self.scrollY(savedScroll);
       document.addEventListener("scroll", self._restoreScroll, {
-        passive: false,
+        passive: true,
       });
     },
     onDisable: (self) =>
@@ -197,7 +199,7 @@ if (window.matchMedia("(min-width: 1026px)").matches) {
     trigger: ".videoSect",
     pin: true,
     start: "top top",
-    end: "+=200",
+    // end: "+=100",
     onEnter: (self) => {
       if (intentObserver.isEnabled) return;
       self.scroll(self.start + 1);

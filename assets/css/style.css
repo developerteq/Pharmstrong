@@ -577,11 +577,9 @@ section.noTopSpace {
 }
 
 .videoCntntRow {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   padding: 100px 0 !important;
   z-index: 9;
+  max-height: 100vh;
   height: 100vh !important;
   align-content: center;
 }
@@ -596,7 +594,6 @@ section.noTopSpace {
 }
 
 .videoSect {
-  position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
